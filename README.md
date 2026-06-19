@@ -4,9 +4,9 @@ Topological Data Analysis of the human gut microbiome using **PCoA**, **Persiste
 
 ## Overview
 
-This project studies whether the human gut microbiome is better represented as discrete groups, known as enterotypes, or as a continuous biological structure.
+This project investigates whether the human gut microbiome is better represented as discrete groups, known as enterotypes, or as a continuous biological structure.
 
-Using microbiome data from Colombian adults, we analyzed the global geometry and topology of the microbiome and evaluated whether this structure was more strongly associated with dietary variables or cardiometabolic health.
+Using microbiome data from Colombian adults, we analyzed the global geometry and topology of the microbiome and evaluated whether this structure was more strongly associated with dietary variables or cardiometabolic health indicators.
 
 ## Main Research Questions
 
@@ -23,7 +23,8 @@ The analysis includes:
 - Principal Coordinates Analysis (PCoA)
 - Persistent Homology
 - Mapper algorithm
-- Moran’s I and alignment scores
+- Moran's I
+- Alignment analysis
 - Differential analysis between Mapper extremes
 - Spearman correlations between bacterial genera
 - Microbial Gradient index
@@ -36,11 +37,14 @@ The analysis includes:
   - *Akkermansia*
   - *Oscillospira*
   - *Methanobrevibacter*
+  - *Christensenella*
+  - *Propionispora*
 - The higher end was associated with more altered cardiometabolic profiles and genera such as:
   - *Prevotella*
   - *Escherichia*
   - *Haemophilus*
-- PCoA visualizations, Spearman correlations, Mapper coloring, and the Microbial Gradient were consistent with the same interpretation.
+  - *Enterobacter*
+- PCoA visualizations, Spearman correlations, Mapper coloring, and the Microbial Gradient consistently supported the same biological interpretation.
 
 ## Repository Structure
 
@@ -52,3 +56,49 @@ The analysis includes:
     ├── microbio_selected.meta
     ├── microbio_selected.otus
     └── microbio_selected.taxonomy
+```
+
+## Data
+
+The project uses three primary files:
+
+- `microbio_selected.meta` → clinical, demographic, and dietary metadata.
+- `microbio_selected.otus` → microbiome abundance table.
+- `microbio_selected.taxonomy` → taxonomic classification of OTUs.
+
+## Tools and Libraries
+
+Main Python libraries used:
+
+- `numpy`
+- `pandas`
+- `matplotlib`
+- `seaborn`
+- `scipy`
+- `scikit-learn`
+- `networkx`
+- `kmapper`
+
+## Authors
+
+- Felipe de Jesús Damián Rodríguez
+- Gabriela Marissa Mosquera Orellana
+- Kira Darián Gómez Pantoja
+
+**Tecnológico de Monterrey**
+
+## Faculty Advisor
+
+Juan Felipe Carmona González
+
+## Course
+
+Geometry and Topology for Data Science
+
+## Date
+
+June 2026
+
+## Disclaimer
+
+This is an academic research project. The results are exploratory and show associations rather than causal relationships.
